@@ -1,5 +1,6 @@
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
+const Employee = require("./lib/Employee");
 const Intern = require("./lib/Intern");
 const inquirer = require("inquirer");
 const path = require("path");
@@ -93,7 +94,7 @@ function questionsToAskEngineer(type){
             type: 'input'
         },
         {
-            message: 'Enter your id?',
+            message: 'Enter your ID?',
             name: 'id',
             type: 'input',
         },
@@ -127,21 +128,21 @@ function promptRole() {
         type: 'list',
         choices: ['Manager', 'Engineer', 'Intern']
     })
-    .then(answer => {
+    .then(answers => {
         console.log(answers.role)
         //if manager is choosen
-        if (answer.role == 'manager') {
-            questionsToAskManager(answer.role);
-        }else if (answer.role == 'Engineer') {
+        if (answers.role == 'manager') {
+            questionsToAskManager(answers.role);
+        }else if (answers.role == 'Engineer') {
             //if engineer is choosen
-            questionsToAskEngineer(answer.role);
+            questionsToAskEngineer(answers.role);
         }else {
             //if intern is choosen
-            questionsToAskIntern(answer.role);
+            questionsToAskIntern(answers.role);
         }
     })
     .catch(error => {
-        if(err) {
+        if (err) {
             console.log(error)
         }
     });
@@ -175,7 +176,7 @@ function newRole() {
 }
 
 //to show employees are being pushed to the array
-function showEmployees(){
+function showEmployees() {
     console.log(employees)
 }
 

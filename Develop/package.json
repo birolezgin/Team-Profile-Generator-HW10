@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/birolezgin/Team-Profile-Generator-HW10#readme",
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "jest": "^26.4.2"
   }
 }
