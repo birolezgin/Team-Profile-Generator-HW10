@@ -1,0 +1,17 @@
+.container-fluid {
+    margin-bottom: 40px;
+    background-color: rgba(250, 140, 140, 0.925);
+}
+
+.team-heading {
+    background-color: rgba(250, 140, 140, 0.925);
+}
+
+h1 {
+    background-color: rgba(250, 140, 140, 0.925);
+}
+
+.card-header {
+    background-color: rgba(147, 236, 199, 0.925);
+}
+
