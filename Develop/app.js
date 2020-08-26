@@ -131,7 +131,7 @@ function promptRole() {
     .then(answers => {
         console.log(answers.role)
         //if manager is choosen
-        if (answers.role == 'manager') {
+        if (answers.role == 'Manager') {
             questionsToAskManager(answers.role);
         }else if (answers.role == 'Engineer') {
             //if engineer is choosen
